@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PADFY</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="favicon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header  >
+    <input   class="search" type="text" placeholder="Search" >
+  
+    <div class="dropdown">
+      <div class="select">
+          <span class="selected">settings</span>
+          <div class="caret"></div>
+
+      </div>
+      <ul class="menu">
+          <li class="active">settings</li>
+          
+          <li>more features coming soon </li>
+          <li>Do not forget to follow Bluefy on The HEADQUARTER<a href="Bluefyway.blogspot.com">BLUEFY HEADQUARTER</a></li>
+         
+        
+      </ul>
+  </div>
+  </header>
+  <div class="note-screen hidden" id="noteScreen">
+    <div class="toolbar">
+      <button onclick="formatText('bold')"><b>B</b></button>
+      <button onclick="formatText('italic')"><i>I</i></button>
+      <button onclick="addMedia()">&#9203;</button>
+      <button onclick="setReminder()">&#9207;</button>
+    </div>
+    <div class="note-form">
+      <h2>Advanced Media Note Form</h2>
+      <textarea id="note" placeholder="Type your note here..."></textarea>
+      <div class="media-previews"></div>
+      <input type="file" id="media-upload" multiple accept="image/*,video/*,audio/*">
+      <button class="file-upload-btn" id="upload-btn">Upload Media</button>
+      <button class="submit-btn" id="submit-btn">Save Note</button>
+    </div>
+    <div class="mood">
+      <label for="mood">Mood:</label>
+      <select id="mood" onchange="updateMood()">
+        <option value="&#128512;">&#128512;</option>
+        <option value="&#128530;">&#128530;</option>
+        <option value="&#128528;">&#128528;</option>
+      </select>
+    </div>
+    <div class="tag">
+      <label for="tag">Tag:</label>
+      <select id="tag" onchange="updateTag()">
+        <option value="&#127872;">&#127872;</option>
+        <option value="&#127874;">&#127874;</option>
+        <option value="&#127875;">&#127875;</option>
+        <option value="&#127876;">&#127876;</option>
+        <option value="&#127877;">&#127877;</option>
+      </select>
+    </div>
+    <div class="bottom-bar">
+      <button class="done-button" onclick="saveNote()">Done</button>
+      <button class="share-button" onclick="shareNote()">Share</button>
+    </div>
+  </div>
+  
+  <main>
+    <div  class="note-list" id="note-list">
+      <ul  id="note-list-items"></ul>
+    </div>
+  
+    <button class="fab" title="Create New Note" onclick="showNoteEditor()">+</button>
+    <div class="notification-bar hidden" id="notificationBar">
+      <span id="notification-message"></span>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

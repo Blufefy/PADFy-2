@@ -1,0 +1,10 @@
+{
+  "name": "PADFY ",
+  "short_name": "PADFY",
+  "display": "standalone",
+  "description": "It is the new upgrade of PADFY",
+  "scope": "/",
+  "start_url": "https://acceronixpro.github.io/PADX-PRO/",
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF"
+}
